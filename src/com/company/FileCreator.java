@@ -1,9 +1,7 @@
 package com.company;
 
 import java.io.*;
-import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,7 +28,7 @@ public class FileCreator extends CocktailDB {
     }
     public void writeINI() {
         if(isURLValid()) {
-            File file = new File("cocktailInfo.txt");
+            File file = new File("cocktailInfo.ini");
             try {
                 FileWriter fileWriter = new FileWriter(file,true);
                 String regex = "\"strIngridient1\":\".+?\"";
