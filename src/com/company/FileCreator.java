@@ -44,12 +44,15 @@ public class FileCreator extends CocktailDB {
                 fileWriter.write(list.get(0));
                 pattern = Pattern.compile(regex2);
                 matcher = pattern.matcher(getJson());
+                list.add(getJson().substring(matcher.start(), matcher.end()));
                 fileWriter.write(list.get(1));
                 pattern = Pattern.compile(regex3);
                 matcher = pattern.matcher(getJson());
+                list.add(getJson().substring(matcher.start(), matcher.end()));
                 fileWriter.write(list.get(2));
                 pattern = Pattern.compile(regex4);
                 matcher = pattern.matcher(getJson());
+                list.add(getJson().substring(matcher.start(), matcher.end()));
                 fileWriter.write(list.get(3));
             } catch (IOException e) {
                 System.out.println("problems with writing ingridients");;
