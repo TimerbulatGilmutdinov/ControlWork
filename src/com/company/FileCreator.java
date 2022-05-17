@@ -32,7 +32,7 @@ public class FileCreator extends CocktailDB {
         if(isURLValid()) {
             File file = new File("cocktailInfo.txt");
             try {
-                FileWriter fileWriter = new FileWriter(file);
+                FileWriter fileWriter = new FileWriter(file,true);
                 String regex = "\"strIngridient1\":\".+?\"";
                 String regex2 = "\"strIngridient2\":\".+?\"";
                 String regex3 = "\"strIngridient3\":\".+?\"";
@@ -51,7 +51,6 @@ public class FileCreator extends CocktailDB {
                 pattern = Pattern.compile(regex4);
                 matcher = pattern.matcher(getJson());
                 fileWriter.write(list.get(3));
-
             } catch (IOException e) {
                 System.out.println("problems with writing ingridients");;
             }
